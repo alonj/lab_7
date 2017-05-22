@@ -8,15 +8,8 @@
 bool SumNormalizer::init(const std::vector<Point> &points) {
     if (points.empty())
         return false;
-    unsigned point_dimension = points[0].getDimension();
-    double sum[point_dimension];
-    for(size_t i = 0; i < point_dimension; i++)
-    {
-        sum[i] = 0.0;
-        for (std::vector<Point>::size_type pi=0; pi<points.size(); pi++){
-            sum[i] += points[pi][i];
-        }
-    }
+    for (std::vector<Point>::size_type pi=0; pi<points.size(); pi++)
+            sum = sum + points[pi];
     return true;
 }
 

@@ -9,8 +9,7 @@ bool MinMaxNormalizer::init(const std::vector<Point> &points) {
     if (points.empty())
         return false;
     double double_max = std::numeric_limits<double>::max(), double_min = std::numeric_limits<double>::min();
-    unsigned point_dimension = points[0].getDimension();
-    double min[point_dimension],max[point_dimension];
+    size_t point_dimension = points[0].getDimension();
     for(size_t i = 0; i < point_dimension; i++)
     {
         min[i] = double_max;

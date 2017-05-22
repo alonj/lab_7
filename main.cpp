@@ -47,18 +47,18 @@ int main(int argc, char *argv[])
     DataReader dr;
     vector<Point> allData;
     dr.read(fileName, allData);
-    KNN knn(7);
+    KNN knn(5);
     Evaluation eval(knn);
     cout << "No normalization: " << eval.crossValidation(allData,10) << endl;
-    ZNormalizer zN(allData[0].getDimension());
-    cout<< "Z-Normalier: ";
-    runKNN(knn, zN, allData);
-    MinMaxNormalizer mmN(allData[0].getDimension());
-    cout<< "Min-Max Normalizer: ";
-    runKNN(knn,mmN,allData);
-    SumNormalizer sN(allData[0].getDimension());
-    cout<< "Sum Normalizer: ";
-    runKNN(knn,sN,allData);
+//    ZNormalizer zN(allData[0].getDimension());
+//    cout<< "Z-Normalier: ";
+//    runKNN(knn, zN, allData);
+//    MinMaxNormalizer mmN(allData[0].getDimension());
+//    cout<< "Min-Max Normalizer: ";
+//    runKNN(knn,mmN,allData);
+//    SumNormalizer sN(allData[0].getDimension());
+//    cout<< "Sum Normalizer: ";
+//    runKNN(knn,sN,allData);
 
     return 0;
 }

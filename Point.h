@@ -21,6 +21,7 @@ public:
     double& operator[](size_t index) { return _values[index];}
     Point operator-(const Point& otherPoint) const;
     Point operator/(const Point& otherPoint) const;
+    Point operator+(const Point& otherPoint) const;
     size_t getDimension()const { return _values.size(); }
     void setValues(const std::vector<double>& values){ _values = values; }
     friend std::ostream& operator<<(std::ostream& os, const Point& point);
